@@ -4,7 +4,7 @@ function gerarPainelDeTarefas(storedTasks) {
     for (let i = 0; i < storedTasks.length; i++) {
         const taskDiv = document.createElement('div');
         taskDiv.classList.add('tarefa-div');
-        // addClickListenerToDivs
+        addClickListenerToDivs(taskDiv)
         painelDeTarefas.appendChild(taskDiv);
 
         const tarefaText = document.createElement('h4');

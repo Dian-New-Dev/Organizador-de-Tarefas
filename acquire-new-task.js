@@ -17,7 +17,5 @@ document.getElementById('formulario').addEventListener('submit', function(event)
 
     gerarPainelDeTarefas(storedTasks);
 
-    retirarHeightdoBody();
-
     document.getElementById('novaTarefa').value = '';  //limpa o input apos submeter
 });
