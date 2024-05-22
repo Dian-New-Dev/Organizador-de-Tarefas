@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>CheckList Diário</title>
+</head>
+<body>
+ 
+
+        
+    <header>
+
+    </header>
+
+    <img class="img-right" src="images/sides.png" alt="Imagem de fundo de circuitos cyberpunk.">
+    <img class="img-left" src="images/sides.png" alt="Imagem de fundo de circuitos cyberpunk.">
+
+
+    <main>
+        <section class="hero">
+            <h1>CHECKLIST DE TAREFAS</h1>
+        </section>
+
+        <section class="main-panel">
+
+            <div class="wrapper">
+                <div class="wrapper-title">
+                    <h3>Pendentes</h3>
+                </div>
+
+                <div id='wrapper-content' class="wrapper-content">
+
+
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="wrapper-title">
+                    <h3>Cumpridos</h3>
+                </div>
+
+                <div class="wrapper-content">
+
+                </div>
+            </div>
+
+        </section>
+
+        <section class="adicionar-nova-pendencia">
+            <div class="adicionar-title">
+                <h3>Adicionar Nova Tarefa</h3>
+
+                <form class='formulario' id="formulario">
+                    <label for="novaTarefa"></label>
+                    <input type="text" id="novaTarefa" name="novatarefa">
+                    <button type="submit">ADICIONAR</button>
+                </form>
+
+            </div>
+        </section>
+        
+
+    </main>
+
+</body>
+<script src="onload.js"></script>
+<script src="acquire-new-task.js"></script>
+<script src="gerarPainelDeTarefas.js"></script>
+<script src="retirarHeightdoBody.js"></script>
+
+</html>
