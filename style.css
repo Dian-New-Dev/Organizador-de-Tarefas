@@ -94,7 +94,26 @@ main {
     padding-left: 20px;
     transition: transform 0.3s ease;
     transform-origin: center;
+    position: relative;
+    overflow: hidden;
 }
+
+.opcoesDiv {
+    position: absolute;
+    right: -120px;
+    top: 20px;
+    transition: right 0.3s ease;
+    
+}
+
+.botoes-taskDiv {
+    margin: 0;
+    text-align: center;
+    padding: 0px 20px;
+    width: 100%;
+    background-color: transparent;
+}
+
 
 .tarefa-texto {
     width: 100%;
@@ -166,3 +185,4 @@ button {
 footer {
     color: red;
 }
+

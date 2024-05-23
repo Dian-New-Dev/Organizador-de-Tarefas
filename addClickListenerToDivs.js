@@ -1,22 +1,64 @@
 function addClickListenerToDivs(taskDiv) {
     taskDiv.addEventListener('click', function() {
-        taskDiv.style.transform = 'scaleX(0)';
-        taskDiv.addEventListener('transitionend', function() {
-            taskDiv.remove();
-            atualizarStoredTasksAposExclusao()
-        })
+        if (taskDiv.id === 'menu-de-opcoes-aberto') {
+            fecharOpcoes(taskDiv);
+        } else {
+            abrirOpcoes(taskDiv);
+        }
+        
     })
 }
 
-let storedTasks2 = [];
+function abrirOpcoes(taskDiv) {
 
-function atualizarStoredTasksAposExclusao() {
-    const novoArrayDeTarefas = document.querySelectorAll('.tarefa-texto');
-    for (let i = 0; i < novoArrayDeTarefas.length; i++) {
-        storedTasks2.push(novoArrayDeTarefas[i].textContent)
-        
+    if (taskDiv.classList.contains('construiu-o-painel-de-opcoes')) {
+        taskDiv.id = 'menu-de-opcoes-aberto';
+        const opcoesDiv = taskDiv.querySelector('.opcoesDiv');
+            opcoesDiv.style.right = '0';
+
+    } else {
+        taskDiv.classList.add('construiu-o-painel-de-opcoes')
+
+    taskDiv.id = 'menu-de-opcoes-aberto';
+
+    const opcoesDiv = document.createElement('div');
+    opcoesDiv.classList.add('opcoesDiv')
+    taskDiv.appendChild(opcoesDiv);
+
+    const opcaoCumprir = document.createElement('button');
+    opcaoCumprir.innerText = '✔'
+    opcaoCumprir.classList.add('botoes-taskDiv')
+    opcaoCumprir.id = 'botao-de-cumprir-tarefa';
+    opcoesDiv.appendChild(opcaoCumprir);
+
+    opcaoCumprir.addEventListener('click', function() {
+        completeTask(taskDiv)
+    })
+
+    const opcaoCancelar = document.createElement('button');
+    opcaoCancelar.innerText = 'X'
+    opcaoCancelar.classList.add('botoes-taskDiv')
+    opcaoCancelar.id = 'botao-de-cancelar-tarefa';
+    opcoesDiv.appendChild(opcaoCancelar);
+
+    opcaoCancelar.addEventListener('click', function() {
+        excludeTask(taskDiv)
+    })
+
+    setTimeout(() => {
+        opcoesDiv.style.right = '0';
+    }, 0)
+
     }
-    localStorage.setItem('tasks-test-2', JSON.stringify(storedTasks2));
-    storedTasks2 = [];
+
     
+
+}
+
+function fecharOpcoes(taskDiv) {
+    const menuDeOpcoesParaFechar = taskDiv.querySelector('.opcoesDiv')
+    menuDeOpcoesParaFechar.style.right = '-120px';
+
+    taskDiv.id = '';
+
 }
