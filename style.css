@@ -21,7 +21,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: start;
-    font-family: Techno;
     position: relative;
     min-height: 100vh;
     padding: 50px 0px;
@@ -242,6 +241,8 @@ footer {
     position: absolute;
     bottom: 0;
     padding: 0;
+    font-family: Techno;
+
 }
 
 footer p, a {
