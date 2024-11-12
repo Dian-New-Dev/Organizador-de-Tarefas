@@ -18,11 +18,3 @@ function atualizarStoredTasksAposExclusao() {
     storedTasksA = [];
     
 }
-
-function completeTask(taskToExclude) {
-    const tarefaCumprida = taskToExclude.querySelector('.tarefa-texto');
-    const tarefaCumpridaTexto = tarefaCumprida.textContent;
-    console.log(tarefaCumpridaTexto)
-    excludeTask(taskToExclude)
-    inserirNovaTarefaCumprida(tarefaCumpridaTexto);
-}

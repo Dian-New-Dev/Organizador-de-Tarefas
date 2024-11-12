@@ -19,35 +19,25 @@ function abrirOpcoes(taskDiv) {
     } else {
         taskDiv.classList.add('construiu-o-painel-de-opcoes')
 
-    taskDiv.id = 'menu-de-opcoes-aberto';
+        taskDiv.id = 'menu-de-opcoes-aberto';
 
-    const opcoesDiv = document.createElement('div');
-    opcoesDiv.classList.add('opcoesDiv')
-    taskDiv.appendChild(opcoesDiv);
+        const opcoesDiv = document.createElement('div');
+        opcoesDiv.classList.add('opcoesDiv')
+        taskDiv.appendChild(opcoesDiv);
 
-    const opcaoCumprir = document.createElement('button');
-    opcaoCumprir.innerText = '✔'
-    opcaoCumprir.classList.add('botoes-taskDiv')
-    opcaoCumprir.id = 'botao-de-cumprir-tarefa';
-    opcoesDiv.appendChild(opcaoCumprir);
+        const opcaoCumprir = document.createElement('button');
+        opcaoCumprir.innerText = '✔'
+        opcaoCumprir.classList.add('botoes-taskDiv')
+        opcaoCumprir.id = 'botao-de-cumprir-tarefa';
+        opcoesDiv.appendChild(opcaoCumprir);
 
-    opcaoCumprir.addEventListener('click', function() {
-        completeTask(taskDiv)
-    })
+        opcaoCumprir.addEventListener('click', function() {
+            excludeTask(taskDiv)
+        })
 
-    const opcaoCancelar = document.createElement('button');
-    opcaoCancelar.innerText = 'X'
-    opcaoCancelar.classList.add('botoes-taskDiv')
-    opcaoCancelar.id = 'botao-de-cancelar-tarefa';
-    opcoesDiv.appendChild(opcaoCancelar);
-
-    opcaoCancelar.addEventListener('click', function() {
-        excludeTask(taskDiv)
-    })
-
-    setTimeout(() => {
-        opcoesDiv.style.right = '0';
-    }, 0)
+        setTimeout(() => {
+            opcoesDiv.style.right = '0';
+        }, 0)
 
     }
 
