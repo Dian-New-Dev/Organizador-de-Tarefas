@@ -1,6 +1,12 @@
+const storedTasks = JSON.parse(localStorage.getItem('tasks-test-2')) || [];
 document.addEventListener('DOMContentLoaded', function (){
-    const storedTasks = JSON.parse(localStorage.getItem('tasks-test-2')) || [];
-    console.log(storedTasks)
-    gerarPainelDeTarefas(storedTasks);
-    // inserirNovaTarefaCumprida();
+    if (storedTasks.length === 0) {
+        //mostrar placeholder
+    } else {
+        //mostrar tarefas armazenadas
+        gerarPainelDeTarefas(storedTasks);
+        checarPlaceholder(storedTasks);
+    }
+
+
 })

@@ -245,3 +245,19 @@ footer a {
     text-decoration: underline;
     color: rgb(87, 82, 82);
 }
+
+.placeholder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.placeholder h2 {
+    text-align: center;
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.esconder-placeholder {
+    display: none;
+}

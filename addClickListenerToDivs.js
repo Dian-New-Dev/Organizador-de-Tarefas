@@ -9,6 +9,8 @@ function addClickListenerToDivs(taskDiv) {
     })
 }
 
+
+
 function abrirOpcoes(taskDiv) {
 
     if (taskDiv.classList.contains('construiu-o-painel-de-opcoes')) {

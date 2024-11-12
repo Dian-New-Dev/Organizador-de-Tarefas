@@ -1,8 +1,10 @@
+
 function excludeTask(taskDiv) {
     taskDiv.style.transform = 'scaleX(0)';
     taskDiv.addEventListener('transitionend', function() {
         taskDiv.remove();
         atualizarStoredTasksAposExclusao()
+        checarPlaceholder(storedTasks);
     })
 }
 
