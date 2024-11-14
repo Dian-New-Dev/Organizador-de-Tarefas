@@ -198,10 +198,21 @@ button {
     font-weight: 900;
 }
 
+@keyframes imgAnim {
+    0%{filter: brightness(0.5)};
+    100%{filter: brightness(1.5)};
+}
+
 .img-left, .img-right {
+    opacity: 1;
     position: absolute;
     bottom: 0;
     pointer-events: none;
+    animation-name: imgAnim;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    
     
 }
 
